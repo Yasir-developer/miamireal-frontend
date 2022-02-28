@@ -1,13 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './slider.module.scss'
-import avatar_1 from '../../../public/images/avatar_images/avatar_1.png'
-import avatar_2 from '../../../public/images/avatar_images/avatar_2.png'
-import avatar_4 from '../../../public/images/avatar_images/avatar_4.png'
-import avatar_5 from '../../../public/images/avatar_images/avatar_5.png'
-import avatar_6 from '../../../public/images/avatar_images/avatar_6.png'
-import appartment_1 from '../../../public/images/appartment_images/appartment_1.jpg'
 import Slider from "react-slick";
+import { IconButton, Menu, MenuItem } from '@material-ui/core'
 
 const ImageDescSlider = (props) => {
     const avatars = props.avatars;
@@ -56,6 +51,15 @@ const ImageDescSlider = (props) => {
     const onPreviousClickAppartment = () => {
         sliderRefAppartments.current.slickPrev();
     }
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
     return (
         <>
             <div className='container py-4'>
@@ -63,30 +67,57 @@ const ImageDescSlider = (props) => {
                     <div className='d-flex align-items-center justify-content-between'>
                         <div className='main-heading'>PFP AVATARS</div>
                         <div className='d-flex align-items-center'>
-                            <button className="btn me-2 p-0" onClick={onPreviousClick}>
+                            <IconButton onClick={onPreviousClick} size="small">
                                 <span className={`${styles.carousel_icon} material-icons-round icon`}>
                                     chevron_left
                                 </span>
-                            </button>
-                            <button className="btn p-0" onClick={onNextClick}>
+                            </IconButton>
+                            <IconButton onClick={onNextClick} size="small">
                                 <span className={`${styles.carousel_icon} material-icons-round icon`}>
                                     chevron_right
                                 </span>
-                            </button>
+                            </IconButton>
                         </div>
                     </div>
                     <Slider ref={sliderRefAvatars} {...settings}>
                         {avatars.map((avatar, index) => {
                             return (
+                                <>
 
-                                <div key={index} className={styles.avatar_wrapper}>
-                                    <Image src={avatar.imgUrl} alt="" className={styles.avatar_img} />
-                                    <div className={styles.avatar_details}>
-                                        <div className={styles.avatar_name}>{avatar.name}</div>
-                                        <div>{avatar.status}</div>
-                                        <div>{avatar.title}</div>
+                                    <div key={index} className={styles.avatar_wrapper}>
+                                        <Image src={avatar.imgUrl} alt="" className={styles.avatar_img} />
+                                        <div className={styles.avatar_details}>
+                                            <div className={styles.avatar_name}>{avatar.name}</div>
+                                            <div>{avatar.status}</div>
+                                            <div>{avatar.title}</div>
+                                        </div>
                                     </div>
-                                </div>
+                                    <IconButton
+                                    className={styles.menu_btn}
+                                        id="basic-button"
+                                        aria-controls={open ? 'basic-menu' : undefined}
+                                        aria-haspopup="true"
+                                        aria-expanded={open ? 'true' : undefined}
+                                        onClick={handleClick}
+                                    >
+                                        <span className={`${styles.card_icon} material-icons-outlined`}>
+                                            more_vert
+                                        </span>
+                                    </IconButton>
+                                    <Menu
+                                        id="basic-menu"
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        onClose={handleClose}
+                                        MenuListProps={{
+                                            'aria-labelledby': 'basic-button',
+                                        }}
+                                    >
+                                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                                    </Menu>
+                                </>
                             )
                         })
                         }
@@ -97,16 +128,17 @@ const ImageDescSlider = (props) => {
                     <div className='d-flex align-items-center justify-content-between'>
                         <div className='main-heading'>APPARTMENTS</div>
                         <div className='d-flex align-items-center'>
-                            <button className="btn me-2 p-0" onClick={onPreviousClickAppartment}>
+
+                            <IconButton onClick={onPreviousClickAppartment} size="small">
                                 <span className={`${styles.carousel_icon} material-icons-round icon`}>
                                     chevron_left
                                 </span>
-                            </button>
-                            <button className="btn p-0" onClick={onNextClickAppartment}>
+                            </IconButton>
+                            <IconButton onClick={onNextClickAppartment} size="small">
                                 <span className={`${styles.carousel_icon} material-icons-round icon`}>
                                     chevron_right
                                 </span>
-                            </button>
+                            </IconButton>
                         </div>
                     </div>
                     <Slider ref={sliderRefAppartments} {...settings}>

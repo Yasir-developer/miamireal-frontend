@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import main_styles from '../../styles/Home.module.scss'
 import styles from '../../styles/Header.module.scss'
+import { Button } from '@material-ui/core'
 
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="d-flex">
-            <button className="custom-btn btn" type="button">Connect to Meta</button>
+            <Button variant="contained" color="primary">Connect to Meta</Button>
           </div>
         </div>
       </div>
