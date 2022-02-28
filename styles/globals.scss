@@ -1,0 +1,38 @@
+$primary:#00a2ff;
+
+@font-face {
+  font-family: "f-bold";
+  src: url("../public/fonts/Muli/Muli-Bold.ttf");
+}
+
+@font-face {
+  font-family: "f-regular";
+  src: url("../public/fonts/Muli/Muli-Regular.ttf");
+}
+
+@font-face {
+  font-family: "f-semibold";
+  src: url("../public/fonts/Muli/Muli-SemiBold.ttf");
+}
+
+// html,
+// body {
+//   font-size: 16px;
+// }
+
+
+.custom_btn {
+  color: $primary;
+  border: 1px solid $primary;
+  background: white;
+  &:hover {
+    color: white;
+    background: $primary;
+  }
+}
+
+.main-heading{
+  font-size: 22px;
+  font-family: "f-bold";
+}
+

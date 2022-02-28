@@ -1,0 +1,22 @@
+@import '../../../styles/globals.scss';
+
+.avatar_wrapper {
+    padding: 10px;
+  
+    .avatar_name {
+      font-weight: 700;
+    }
+  
+    .avatar_details {
+      text-align: center;
+    }
+  
+    .avatar_img {
+      border-radius: 5px;
+    }
+  }
+  
+  .carousel_icon {
+    color: $primary ;
+    font-size: 40px ;
+  }

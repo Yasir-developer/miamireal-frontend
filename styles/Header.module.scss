@@ -1,0 +1,9 @@
+.nav_link {
+    margin: 0px 15px;
+    color: grey;
+
+    &:hover {
+        color: #00a2ff;
+        border-bottom: 2px solid #00a2ff;
+    }
+}
