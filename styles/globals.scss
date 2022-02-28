@@ -1,6 +1,11 @@
 $primary:#00a2ff;
 
 @font-face {
+  font-family: "f-xbold";
+  src: url("../public/fonts/Muli/Muli-ExtraBold.ttf");
+}
+
+@font-face {
   font-family: "f-bold";
   src: url("../public/fonts/Muli/Muli-Bold.ttf");
 }
@@ -21,7 +26,7 @@ $primary:#00a2ff;
 // }
 
 
-.custom_btn {
+.custom-btn {
   color: $primary;
   border: 1px solid $primary;
   background: white;
@@ -33,6 +38,6 @@ $primary:#00a2ff;
 
 .main-heading{
   font-size: 22px;
-  font-family: "f-bold";
+  font-family: "f-xbold";
 }
 

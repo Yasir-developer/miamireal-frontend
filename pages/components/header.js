@@ -28,7 +28,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="d-flex">
-            <button className={`${main_styles.custom_btn} btn `} type="button">Connect to Meta</button>
+            <button className="custom-btn btn" type="button">Connect to Meta</button>
           </div>
         </div>
       </div>
