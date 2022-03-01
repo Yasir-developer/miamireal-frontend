@@ -7,9 +7,8 @@ import avatar_4 from '../public/images/avatar_images/avatar_4.png'
 import avatar_5 from '../public/images/avatar_images/avatar_5.png'
 import avatar_6 from '../public/images/avatar_images/avatar_6.png'
 import appartment_1 from '../public/images/appartment_images/appartment_1.jpg'
-import Slider from "react-slick";
 import React from 'react'
-import ImageDescSlider from './components/Image-desc-slider'
+import ImageDescSlider from '../components/image-desc-slider'
 
 export default function Home() {
   

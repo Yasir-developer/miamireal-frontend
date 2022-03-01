@@ -123,41 +123,6 @@ const ImageDescSlider = ({items, title}) => {
                         }
                     </Slider>
                 </div>
-
-                {/* <div className='appartments my-5 pt-5'>
-                    <div className='d-flex align-items-center justify-content-between'>
-                        <div className='main-heading'>APPARTMENTS</div>
-                        <div className='d-flex align-items-center'>
-
-                            <IconButton onClick={onPreviousClickAppartment} size="small">
-                                <span className={`${styles.carousel_icon} material-icons-round icon`}>
-                                    chevron_left
-                                </span>
-                            </IconButton>
-                            <IconButton onClick={onNextClickAppartment} size="small">
-                                <span className={`${styles.carousel_icon} material-icons-round icon`}>
-                                    chevron_right
-                                </span>
-                            </IconButton>
-                        </div>
-                    </div>
-                    <Slider ref={sliderRefAppartments} {...settings}>
-                        {appartments && appartments.length && appartments.map((appartment, index) => {
-                            return (
-
-                                <div key={index} className={styles.avatar_wrapper}>
-                                    <Image src={appartment.imgUrl} alt="" className={styles.avatar_img} />
-                                    <div className={styles.avatar_details}>
-                                        <div className={styles.avatar_name}>{appartment.name}</div>
-                                        <div>{appartment.status}</div>
-                                        <div>{appartment.title}</div>
-                                    </div>
-                                </div>
-                            )
-                        })
-                        }
-                    </Slider>
-                </div> */}
             </div>
         </>
 

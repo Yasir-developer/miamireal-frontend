@@ -1,7 +1,7 @@
 import '../styles/globals.scss'
 // import "~slick-carousel/slick/slick.css"; 
 // import "~slick-carousel/slick/slick-theme.css";
-import Header from './components/header'
+import Header from '../components/header'
 import Head from "next/head";
 import Script from "next/script"
 
