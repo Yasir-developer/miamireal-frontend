@@ -40,3 +40,6 @@ $primary:#00a2ff;
   font-family: "f-xbold";
 }
 
+.MuiButton-containedPrimary{
+  background-color: $primary !important;
+}

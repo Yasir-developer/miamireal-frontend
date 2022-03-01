@@ -92,7 +92,7 @@ const ImageDescSlider = (props) => {
                                             <div>{avatar.title}</div>
                                         </div>
                                     </div>
-                                    <IconButton
+                                    {/* <IconButton
                                     className={styles.menu_btn}
                                         id="basic-button"
                                         aria-controls={open ? 'basic-menu' : undefined}
@@ -116,7 +116,7 @@ const ImageDescSlider = (props) => {
                                         <MenuItem onClick={handleClose}>Profile</MenuItem>
                                         <MenuItem onClick={handleClose}>My account</MenuItem>
                                         <MenuItem onClick={handleClose}>Logout</MenuItem>
-                                    </Menu>
+                                    </Menu> */}
                                 </>
                             )
                         })
