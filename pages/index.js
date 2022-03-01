@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
 import avatar_1 from '../public/images/avatar_images/avatar_1.png'
 import avatar_2 from '../public/images/avatar_images/avatar_2.png'
 import avatar_4 from '../public/images/avatar_images/avatar_4.png'

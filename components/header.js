@@ -1,11 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import main_styles from '../../styles/Home.module.scss'
-import styles from '../../styles/Header.module.scss'
+import styles from '../styles/Header.module.scss'
 import { Button } from '@material-ui/core'
+import { useWeb3 } from "@3rdweb/hooks" 
 
 
 const Header = () => {
+  const { connectWallet, address, error } = useWeb3();
+
+  const getAddress = () => {
+    return <p>{address}</p>
+  }
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark py-3">
       <div className="container-fluid">
@@ -29,8 +35,12 @@ const Header = () => {
             </li>
           </ul>
           <div className="d-flex">
-            <Button variant="contained" color="primary">Connect Meta Mask</Button>
+            { address && getAddress() }
+            { !address && <Button variant="contained" color="primary" onClick={()=>connectWallet("injected")}>Connect Meta Mask</Button>}
+
           </div>
+          
+          
         </div>
       </div>
     </nav>
