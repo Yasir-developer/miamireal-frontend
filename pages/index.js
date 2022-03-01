@@ -12,32 +12,7 @@ import React from 'react'
 import ImageDescSlider from './components/Image-desc-slider'
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          initialSlide: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        }
-      }
-    ]
-  };
-
+  
   const avatar_data = [
     {
       name: "Alpha 1",
@@ -94,6 +69,7 @@ export default function Home() {
       imgUrl: avatar_1
     },
   ]
+
   const appartments_data = [
     {
       name: "Alpha 1",
@@ -161,8 +137,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <ImageDescSlider items={avatar_data} title="PFP AVATARS" />
+      <ImageDescSlider items={appartments_data} title="APPARTMENTS" />
 
-      <ImageDescSlider avatars={avatar_data} appartments={appartments_data} />
     </>
   )
 }

@@ -4,11 +4,12 @@ import styles from './slider.module.scss'
 import Slider from "react-slick";
 import { IconButton, Menu, MenuItem } from '@material-ui/core'
 
-const ImageDescSlider = (props) => {
-    const avatars = props.avatars;
-    const appartments = props.appartments;
+const ImageDescSlider = ({items, title}) => {
 
-
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const sliderRefAvatars = React.createRef(null);
+    const sliderRefAppartments = React.createRef(null);
     const settings = {
         dots: true,
         infinite: true,
@@ -35,7 +36,7 @@ const ImageDescSlider = (props) => {
         ]
     };
 
-    const sliderRefAvatars = React.createRef(null);
+    
     const onNextClick = () => {
         sliderRefAvatars.current.slickNext();
     }
@@ -43,20 +44,18 @@ const ImageDescSlider = (props) => {
         sliderRefAvatars.current.slickPrev();
     }
 
-
-    const sliderRefAppartments = React.createRef(null);
     const onNextClickAppartment = () => {
         sliderRefAppartments.current.slickNext();
     }
+
     const onPreviousClickAppartment = () => {
         sliderRefAppartments.current.slickPrev();
     }
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
     const handleClose = () => {
         setAnchorEl(null);
     };
@@ -65,7 +64,7 @@ const ImageDescSlider = (props) => {
             <div className='container py-4'>
                 <div className='avatars my-5'>
                     <div className='d-flex align-items-center justify-content-between'>
-                        <div className='main-heading'>PFP AVATARS</div>
+                        <div className='main-heading'>{title}</div>
                         <div className='d-flex align-items-center'>
                             <IconButton onClick={onPreviousClick} size="small">
                                 <span className={`${styles.carousel_icon} material-icons-round icon`}>
@@ -80,7 +79,7 @@ const ImageDescSlider = (props) => {
                         </div>
                     </div>
                     <Slider ref={sliderRefAvatars} {...settings}>
-                        {avatars.map((avatar, index) => {
+                        {items && items.length && items.map((avatar, index) => {
                             return (
                                 <>
 
@@ -92,6 +91,7 @@ const ImageDescSlider = (props) => {
                                             <div>{avatar.title}</div>
                                         </div>
                                     </div>
+
                                     {/* <IconButton
                                     className={styles.menu_btn}
                                         id="basic-button"
@@ -124,7 +124,7 @@ const ImageDescSlider = (props) => {
                     </Slider>
                 </div>
 
-                <div className='appartments my-5 pt-5'>
+                {/* <div className='appartments my-5 pt-5'>
                     <div className='d-flex align-items-center justify-content-between'>
                         <div className='main-heading'>APPARTMENTS</div>
                         <div className='d-flex align-items-center'>
@@ -142,7 +142,7 @@ const ImageDescSlider = (props) => {
                         </div>
                     </div>
                     <Slider ref={sliderRefAppartments} {...settings}>
-                        {appartments.map((appartment, index) => {
+                        {appartments && appartments.length && appartments.map((appartment, index) => {
                             return (
 
                                 <div key={index} className={styles.avatar_wrapper}>
@@ -157,7 +157,7 @@ const ImageDescSlider = (props) => {
                         })
                         }
                     </Slider>
-                </div>
+                </div> */}
             </div>
         </>
 

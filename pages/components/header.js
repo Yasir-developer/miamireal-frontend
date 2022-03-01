@@ -29,7 +29,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="d-flex">
-            <Button variant="contained" color="primary">Connect to Meta</Button>
+            <Button variant="contained" color="primary">Connect Meta Mask</Button>
           </div>
         </div>
       </div>
