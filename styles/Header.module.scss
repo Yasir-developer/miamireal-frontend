@@ -8,3 +8,11 @@
         border-bottom: 2px solid #00a2ff;
     }
 }
+
+.address_field {
+    color: white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 200px;
+    overflow: hidden;
+}

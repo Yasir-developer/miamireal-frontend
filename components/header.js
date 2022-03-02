@@ -8,8 +8,15 @@ import { useWeb3 } from "@3rdweb/hooks"
 const Header = () => {
   const { connectWallet, address, error } = useWeb3();
 
+  console.log('error', error)
+  console.log('address', address)
+
   const getAddress = () => {
-    return <p>{address}</p>
+    return <p className={styles.address_field}>{address}</p>
+  }
+
+  const buttonHandler = () => {
+    connectWallet("injected") 
   }
 
   return (
@@ -36,7 +43,7 @@ const Header = () => {
           </ul>
           <div className="d-flex">
             { address && getAddress() }
-            { !address && <Button variant="contained" color="primary" onClick={()=>connectWallet("injected")}>Connect Meta Mask</Button>}
+            { !address && <Button variant="contained" color="primary" onClick={()=>buttonHandler()}>Connect Meta Mask</Button>}
 
           </div>
           
