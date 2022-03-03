@@ -1,4 +1,4 @@
-$primary:#00a2ff;
+$primary: #00a2ff;
 
 @font-face {
   font-family: "f-xbold";
@@ -35,11 +35,15 @@ $primary:#00a2ff;
   }
 }
 
-.main-heading{
+.main-heading {
   font-size: 22px;
   font-family: "f-xbold";
 }
 
-.MuiButton-containedPrimary{
+.MuiButton-containedPrimary {
   background-color: $primary !important;
+}
+
+.MuiPaper-elevation8 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05) !important;
 }

@@ -7,7 +7,8 @@ import avatar_5 from '../public/images/avatar_images/avatar_5.png'
 import avatar_6 from '../public/images/avatar_images/avatar_6.png'
 import appartment_1 from '../public/images/appartment_images/appartment_1.jpg'
 import React from 'react'
-import ImageDescSlider from '../components/image-desc-slider'
+import Avatars from '../components/avatars'
+import Appartments from './../components/appartments/index';
 
 export default function Home() {
   
@@ -135,8 +136,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ImageDescSlider items={avatar_data} title="PFP AVATARS" />
-      <ImageDescSlider items={appartments_data} title="APPARTMENTS" />
+      <Avatars items={avatar_data} title="PFP AVATARS" />
+      <Appartments items={appartments_data} title="APPARTMENTS" />
 
     </>
   )

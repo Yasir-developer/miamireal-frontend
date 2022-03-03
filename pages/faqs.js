@@ -3,10 +3,10 @@ import Image from 'next/image'
 import styles from '../styles/Faqs.module.scss'
 
 const Faqs = () => {
-  
+
   return (
     <>
-      <div className="container-fluid my-3">
+      <div className='container py-4'>
         <div className="pb-2 borderbottom d-flex align-items-center justify-content-between">
           <h3>FAQs</h3>
         </div>

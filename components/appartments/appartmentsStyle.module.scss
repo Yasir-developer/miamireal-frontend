@@ -1,0 +1,29 @@
+@import '../../styles/globals.scss';
+
+.appartment_wrapper {
+    padding: 10px;
+    position: relative;
+  
+    .appartment_name {
+      font-weight: 700;
+    }
+  
+    .appartment_details {
+      text-align: center;
+    }
+  
+    .appartment_img {
+      border-radius: 5px;
+    }
+  }
+  
+  .carousel_icon {
+    color: $primary ;
+    font-size: 40px ;
+  }
+
+  .menu_btn{
+    position: absolute !important;
+    right: 10px;
+    top: 17px;
+  }
